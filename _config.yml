@@ -1,8 +1,8 @@
 title: CompSci Blogs
 description: "August 2023 to June 2024"
 owner_name: Nighthawk Coders
-github_username: nighthawkcoders
-baseurl: "/student"
+github_username: magic005
+baseurl: "/ansh_csse/"
 remote_theme: pages-themes/merlot@v0.2.0
 plugins:
 - jekyll-remote-theme
