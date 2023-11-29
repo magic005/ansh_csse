@@ -5,7 +5,7 @@ title: Student Blog
 
 
 ## Build you Home Page here 
-This is about your journey. Start now!!!
+Hi, my name is Ansh. I'm 14 years old and have lived in San Diego my entire life. I'm currently a freshman in Del Norte High School. Outside of school, I enjoy extracurricular and volunteer work.
 
 ## Overview of Hacks, Study and Tangibles
 Blogging in GitHub pages is a way to learn and code at the same time. 
