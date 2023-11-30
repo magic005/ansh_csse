@@ -66,6 +66,12 @@
     }
   }
 
+body {
+
+  background-color: #000000
+
+}
+
   /* styling for the calculator number button */
   .calculator-number {
     @extend .button;
