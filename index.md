@@ -3,10 +3,13 @@ layout: default
 title: Student Blog
 ---
 
-<img style="border:5px outset gray;" src="images/aboutme2.jpg">
+<img style="border-radius: 3px; box-shadow: 0px 0px 20px #6E6E6E; filter: hue-rotate(80deg);" src="images/aboutme2.jpg">
+
 
 ## About Me 
 Hi, my name is Ansh. I'm 14 years old and have lived in San Diego my entire life. I'm currently a freshman in Del Norte High School. My family is from India, so Indian culture has been a big part of my life. Like nearly every other Indian in the US, my interests lie in computer sciences, though, I'm slightly oriented towards liberal arts. Outside of school, I enjoy extracurricular and volunteer work. I compete in several team cybersecurity competitions, my job pertaining to network engineering. I'm currently in pursuit of a CCNA certificate to pursue that interest further. As for the volunteering, I teach English to IIT students online and do some backend work for an NGO called "Talk to Me India." 
+
+<br>
 
 ## Overview of Hacks, Study and Tangibles
 Blogging in GitHub pages is a way to learn and code at the same time. 
