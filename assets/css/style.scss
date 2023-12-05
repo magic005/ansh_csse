@@ -68,8 +68,16 @@
 
 body {
 
-  background-color: #000000
+  background-image: linear-gradient(to right, rgb(41, 41, 41) , rgb(0, 0, 0));
 
+}
+
+a {
+  color: rgb(9, 127, 206);
+}
+
+h1, h2, h3, h4 {
+  color: rgb(9, 127, 206);
 }
 
   /* styling for the calculator number button */
