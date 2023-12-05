@@ -3,7 +3,7 @@ layout: default
 title: Student Blog
 ---
 
-<img style="border-radius: 3px; box-shadow: 0px 0px 20px #6E6E6E;" src="images/aboutme2.jpg">
+<img style="border-radius: 3px; box-shadow: 0px 0px 30px #35bde7;" src="images/aboutme2.jpg">
 
 
 ## About Me 
