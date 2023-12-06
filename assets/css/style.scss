@@ -68,7 +68,7 @@
 
 body {
 
-  background-image: linear-gradient(to right, rgb(33, 33, 33) , rgb(0, 0, 0));
+  background-image: linear-gradient(to right, rgb(21, 21, 21) , rgb(0, 0, 0));
 
 }
 
@@ -76,13 +76,40 @@ a {
   color: rgb(9, 127, 206);
 }
 
-h1, h2, h3, h4 {
-  background: linear-gradient( 
-            to right, #35bde7, #0064cf); 
+h2, h3, h4 {
+  background: linear-gradient(to right, #35bde7, #0064cf); 
         -webkit-text-fill-color: transparent; 
         -webkit-background-clip: text;
-    } 
+}
 
+h1 {
+    border:1px solid black;
+    font-size:30px;
+    background: linear-gradient(to right, #67dbff, #650098);
+      -webkit-text-fill-color: transparent; 
+      -webkit-background-clip: text;
+    background-size: 200% 200%;
+
+    -webkit-animation: Animation 6s ease infinite;
+    -moz-animation: Animation 6s ease infinite;
+    animation: Animation 6s ease infinite;
+}
+
+@-webkit-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%} 
+}
 
   /* styling for the calculator number button */
   .calculator-number {
