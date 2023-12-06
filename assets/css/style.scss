@@ -85,14 +85,14 @@ h2, h3, h4 {
 h1 {
     border:1px solid black;
     font-size:30px;
-    background: linear-gradient(to right, #67dbff, #650098);
+    background: linear-gradient(130deg, #67dbff, #183ced);
       -webkit-text-fill-color: transparent; 
       -webkit-background-clip: text;
     background-size: 200% 200%;
 
-    -webkit-animation: Animation 6s ease infinite;
-    -moz-animation: Animation 6s ease infinite;
-    animation: Animation 6s ease infinite;
+    -webkit-animation: Animation 4s ease infinite;
+    -moz-animation: Animation 4s ease infinite;
+    animation: Animation 4s ease infinite;
 }
 
 @-webkit-keyframes Animation {
