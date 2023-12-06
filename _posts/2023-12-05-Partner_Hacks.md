@@ -7,16 +7,6 @@ description: Mihir's first post on Ansh's Website about Liverpool FC.
 type: hacks
 courses: { compsci: {week: 2} }
 ---
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
 
