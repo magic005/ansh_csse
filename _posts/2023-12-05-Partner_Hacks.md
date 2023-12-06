@@ -18,6 +18,13 @@ courses: { compsci: {week: 2} }
 <br>
 <br>
 
+
+
+<p style="background: linear-gradient(to right, #C9B1FF, #FFCAF2, #FFB2B1, #FFF3AD, #BCFFBC, #A2EDFF);-webkit-text-fill-color: transparent; -webkit-background-clip: text;"> ___________________________________________________________________________________________________________</p>
+
+<br>
+
+
 <p>Liverpool FC stands out as the epitome of football excellence, solidifying its status as the best team in the world. The club's rich history, adorned with triumphs and legendary moments, serves as a testament to its unparalleled legacy. From the spine-tingling atmospheres at Anfield to the iconic "You'll Never Walk Alone" anthem, Liverpool embodies a unique blend of passionate fanbase and relentless determination on the pitch. The team's attacking prowess, orchestrated by world-class talents, combines flair, precision, and sheer brilliance. Jurgen Klopp's charismatic leadership has injected a winning mentality that resonates throughout the squad. Liverpool's commitment to attacking, high-intensity football has not only yielded domestic and international titles but has also earned the admiration of fans globally. The club's ethos of unity, resilience, and a never-say-die attitude cements Liverpool FC as the undisputed best, forging a connection with supporters that transcends geographical boundaries.</p>
 
 <br>
