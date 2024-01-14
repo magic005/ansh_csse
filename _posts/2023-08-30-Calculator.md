@@ -3,7 +3,7 @@ toc: true
 comments: false
 layout: post
 title: Calculator MD
-description: Grab of the Calculator from APCSA repo.
+description: ~scientific calculator
 type: tangibles
 courses: { compsci: {week: 2} }
 ---
@@ -15,16 +15,25 @@ courses: { compsci: {week: 2} }
       result to take up the entirety of the first row;
       span defines 4 columns and 1 row
     */
-    grid-column: span 4;
+    grid-column: span 5;
     grid-row: span 1;
   
-    padding: 0.25em;
+    padding: 0.75em;
     font-size: 20px;
     border: 5px solid black;
+    border-radius: 8px;
   
     display: flex;
     align-items: center;
   }
+  .calculator-clear {
+    background-color: black;
+  }
+
+  .calculator-equals {
+    background-color: black;
+  }
+
 </style>
 
 <!-- Add a container for the animation -->
@@ -37,21 +46,27 @@ courses: { compsci: {week: 2} }
       <div class="calculator-number">2</div>
       <div class="calculator-number">3</div>
       <div class="calculator-operation">+</div>
+      <div class="calculator-operation">-</div>
       <!--row 2-->
       <div class="calculator-number">4</div>
       <div class="calculator-number">5</div>
       <div class="calculator-number">6</div>
-      <div class="calculator-operation">-</div>
+      <div class="calculator-operation">!</div>
+      <div class="calculator-operation">^</div>
       <!--row 3-->
       <div class="calculator-number">7</div>
       <div class="calculator-number">8</div>
       <div class="calculator-number">9</div>
       <div class="calculator-operation">*</div>
+      <div class="calculator-operation">/</div>
       <!--row 4-->
       <div class="calculator-clear">A/C</div>
       <div class="calculator-number">0</div>
       <div class="calculator-number">.</div>
       <div class="calculator-equals">=</div>
+      <div class="calculator-operation">()</div>
+      <!--row 5-->
+      
   </div>
 </div>
 
@@ -73,6 +88,61 @@ courses: { compsci: {week: 2} }
     button.addEventListener("click", function() {
       number(button.textContent);
     });
+  });
+
+  // Event listener for number key presses
+  document.addEventListener("keydown", function(event) {
+    // Check if the pressed key is a number key (0-9)
+    const pressedKey = event.key;
+    if (!isNaN(pressedKey) && pressedKey !== " ") {
+      const numberKeys = document.querySelectorAll(".calculator-number");
+      numberKeys.forEach(numberKey => {
+        if (numberKey.textContent === pressedKey) {
+          number(pressedKey);
+        }
+      });
+    }
+  });
+
+  /*document.addEventListener("keydown", function(event) {
+    const pressedKey = event.key;
+    if (!isNaN(pressedKey)) {
+      const operationKeys = document.querySelectorAll(".calculator-operation");
+      operationKeys.forEach(operationKey => {
+        if (operationKey.textContent === pressedKey) {
+          operation(pressedKey);
+        }  
+      });
+    }
+  });*/
+
+  document.addEventListener("keydown", function(event) {
+    const pressedKey = event.key;
+    const operationKeys = ["+","-","*", "!", "/", "^","()"];
+    if (operationKeys.includes(pressedKey)) {
+      operation(pressedKey);
+    }
+  });
+
+  document.addEventListener("keydown", function(event) {
+    const pressedKey = event.key;
+    if (pressedKey === "Enter") {
+      equal();
+    }
+  });
+
+  document.addEventListener("keydown", function(event) {
+    const pressedKey = event.key;
+    if (pressedKey === "Backspace") {
+      clearCalc();
+    }
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === 'w') {
+      const link = 'https://www.desmos.com/calculator/szfporzixs';
+      window.open(link);
+    }
   });
 
   // Number action
@@ -130,7 +200,25 @@ courses: { compsci: {week: 2} }
               result = first * second;
               break;
           case "/":
-              result = first / second;
+              if (second === 0) {
+                result = "bro rly";
+              } else {
+                  result = first / second;
+              }
+              break;
+          case "!":
+              let fact = 1
+              for (i = 1; i<= first; i++){
+                fact *= i;
+              }
+              result = fact;
+              break;
+          case "^":
+              result = first ** second;
+              break;
+          case "()":
+              window.open("https://www.desmos.com/calculator/szfporzixs");
+              result = "3.141592653589793238462643383279502884197169";
               break;
           default: 
               break;
@@ -165,34 +253,4 @@ courses: { compsci: {week: 2} }
       output.innerHTML = "0";
       nextReady = true;
   }
-</script>
-
-<!-- 
-Vanta animations just for fun, load JS onto the page
--->
-<script src="{{site.baseurl}}/assets/js/three.r119.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/vanta.halo.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/vanta.birds.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/vanta.net.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/vanta.rings.min.js"></script>
-
-<script>
-// setup vanta scripts as functions
-var vantaInstances = {
-  halo: VANTA.HALO,
-  birds: VANTA.BIRDS,
-  net: VANTA.NET,
-  rings: VANTA.RINGS
-};
-
-// obtain a random vanta function
-var vantaInstance = vantaInstances[Object.keys(vantaInstances)[Math.floor(Math.random() * Object.keys(vantaInstances).length)]];
-
-// run the animation
-vantaInstance({
-  el: "#animation",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false
-});
 </script>

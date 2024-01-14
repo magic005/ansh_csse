@@ -25,7 +25,7 @@ courses: { compsci: {week: 3} }
 
 
 <!-- Audio -->
-<audio id="pointSound" src="{{site.baseurl}}/audio/points2.wav" preload="auto"></audio>
+<audio id="pointSound" src="{{site.baseurl}}/audio/points21.wav" preload="auto"></audio>
 <audio id="lostSound" src="{{site.baseurl}}/audio/game-over.mp3" preload="auto"></audio>
 <audio id="winnerSound" src="{{site.baseurl}}/audio/winner.wav" preload="auto"></audio>
 

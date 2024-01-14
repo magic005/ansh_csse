@@ -24,6 +24,7 @@
     transition: all 0.5s;
   }
 
+
   /* define class for redifined button */
   .button {
     @include button;
@@ -31,7 +32,7 @@
 
    /* darkens the background color on hover to create a selecting effect */
   .button:hover {
-    background-color: #373737;
+    background-image: linear-gradient(to right, #35bde7, #0064cf);
   }
 
   /* "row style" is flexible size and aligns pictures in center */
@@ -45,19 +46,55 @@
     flex: 16.66%;
     padding: 3px;
   }
-  
+
+
+
+
+// STYLING FOR STATS CALCULATOR
+  .stat-container {
+    width: 100vw; /* this width and height is specified for mobile devices by default */
+    height: 80vh;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* fr is a special unit; learn more here: https://css-tricks.com/introduction-fr-css-unit/  */
+    grid-template-rows: 0.5fr repeat(5, 1fr);
+    gap: 10px 10px;
+  }
+
 // STYLING FOR CALCULATOR
   /* class to create the calculator's container; uses CSS grid dsiplay to partition off buttons */
   .calculator-container { 
-    width: 90vw; /* this width and height is specified for mobile devices by default */
+    width: 100vw; /* this width and height is specified for mobile devices by default */
     height: 80vh;
     margin: 0 auto;
   
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* fr is a special unit; learn more here: https://css-tricks.com/introduction-fr-css-unit/  */
-    grid-template-rows: 0.5fr repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr); /* fr is a special unit; learn more here: https://css-tricks.com/introduction-fr-css-unit/  */
+    grid-template-rows: 0.5fr repeat(5, 1fr);
     gap: 10px 10px;
   }
+
+  .calculator-number {
+    background-color: #000000;
+    color: white;
+  }
+
+  .calculator-operation {
+    background-color:#000000;
+    color: rgb(9, 127, 206);
+  }
+
+  .calculator-clear {
+    background-color: #000000;
+    color:#e70f0f
+  }
+
+  .calculator-equals {
+    background-color: black;
+    color:#e70f0f;
+  }
+
   
   @media (min-width: 600px) { 
     .calculator-container {
@@ -67,9 +104,7 @@
   }
 
 body {
-
   background-image: linear-gradient(to right, rgb(21, 21, 21) , rgb(0, 0, 0));
-
 }
 
 a {
@@ -130,5 +165,9 @@ h1 {
   .calculator-equals {
     @extend .button;
     background-color: #e70f0f;
+  }
+
+  .calc-function {
+    @extend .button;
   }
 
